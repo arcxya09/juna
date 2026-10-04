@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /juna/
+Sitemap: https://arcxya09.github.io/juna/sitemap.xml
