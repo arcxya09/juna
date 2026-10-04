@@ -1,2 +1,6 @@
-.DS_Store
-logs/*
+node_modules/
+dist/
+pages/
+.next/
+*.tsbuildinfo
+.env*
