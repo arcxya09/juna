@@ -8,7 +8,7 @@ export const papers: Paper[] = [
 export const credits: {label:[string,string];url:string;credit:string}[] = [
   {label:["JUNA 项目名称与实验目标","JUNA name and scientific mission"],url:"https://cjpl.tsinghua.edu.cn/column/Experiments",credit:"China Jinping Underground Laboratory / 清华大学"},
   {label:["JUNA 实验平台综述（2025）","Review of the JUNA experimental platform (2025)"],url:"https://doi.org/10.1146/annurev-nucl-121423-101021",credit:"Annual Review of Nuclear and Particle Science 75, 271–299"},
-  {label:["装置与岩层覆盖公开资料","Published facility and overburden information"],url:"https://doi.org/10.1007/s41365-024-01590-3",credit:"Nuclear Science and Techniques / JUNA collaboration"},
+  {label:["装置与岩层覆盖综述（2024）","Facility and overburden review (2024)"],url:"https://doi.org/10.1007/s41365-024-01590-3",credit:"Nuclear Science and Techniques / JUNA collaboration"},
   {label:["面纱星云：哈勃空间望远镜观测","Veil Nebula: Hubble Space Telescope observation"],url:"https://esahubble.org/images/potw2113a/",credit:"ESA/Hubble & NASA, Z. Levay · CC BY 4.0 · WebP conversion / 图像压缩"},
   {label:["JUNA 装置实景","JUNA facility photograph"],url:"https://inrio.net/facilities",credit:"INRIO / China Institute of Atomic Energy · Original rights retained / 原权利人保留版权"},
 ];

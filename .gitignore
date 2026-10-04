@@ -4,3 +4,5 @@ pages/
 .next/
 *.tsbuildinfo
 .env*
+
+/out/
