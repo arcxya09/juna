@@ -1,6 +1,6 @@
 {
   "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js": {
-    "file": "_next/static/chunks/app-route-prefetch-policy-DVKwcgGI.js",
+    "file": "_next/static/chunks/app-route-prefetch-policy-CT_3XE13.js",
     "name": "app-route-prefetch-policy",
     "src": "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js",
     "isDynamicEntry": true,
@@ -9,7 +9,7 @@
     ]
   },
   "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "_next/static/chunks/layout-segment-context-x9_0yXH4.js",
+    "file": "_next/static/chunks/layout-segment-context-CoqsqbEr.js",
     "name": "layout-segment-context",
     "src": "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -20,7 +20,7 @@
     ]
   },
   "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/streamed-icons.js": {
-    "file": "_next/static/chunks/streamed-icons-D0Q1wsQE.js",
+    "file": "_next/static/chunks/streamed-icons-D-TahkkG.js",
     "name": "streamed-icons",
     "src": "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/streamed-icons.js",
     "isDynamicEntry": true,
@@ -87,7 +87,7 @@
     ]
   },
   "app/publication-detail.tsx": {
-    "file": "_next/static/chunks/publication-detail-CGqCw_HA.js",
+    "file": "_next/static/chunks/publication-detail-8VWK9AGy.js",
     "name": "publication-detail",
     "src": "app/publication-detail.tsx",
     "isDynamicEntry": true,
@@ -102,7 +102,7 @@
     ]
   },
   "app/research-detail.tsx": {
-    "file": "_next/static/chunks/research-detail-_WyzEKRp.js",
+    "file": "_next/static/chunks/research-detail-B_bGazMB.js",
     "name": "research-detail",
     "src": "app/research-detail.tsx",
     "isDynamicEntry": true,
@@ -117,18 +117,8 @@
       "_next/static/css/research-detail.ChCP_AHP.css"
     ]
   },
-  "app/static-history.tsx": {
-    "file": "_next/static/chunks/static-history-C0ms_-aB.js",
-    "name": "static-history",
-    "src": "app/static-history.tsx",
-    "isDynamicEntry": true,
-    "imports": [
-      "_rolldown-runtime-C60lm6uB.js",
-      "_framework-D_rUT4EX.js"
-    ]
-  },
   "virtual:vinext-app-browser-entry": {
-    "file": "_next/static/chunks/index-ClF-CHM0.js",
+    "file": "_next/static/chunks/index-Cgp3Vbxh.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -143,8 +133,7 @@
       "app/page.tsx",
       "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/layout-segment-context.js",
       "app/research-detail.tsx",
-      "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/streamed-icons.js",
-      "app/static-history.tsx"
+      "../../sites/juna-deepstars/node_modules/.pnpm/vinext@1.0.0-beta.5_@vitejs+plugin-react@6.0.2_vite@8.0.13_@types+node@22.19.19_esbuild_83db80f580ed9bdd6c2d1523b512e93c/node_modules/vinext/dist/shims/streamed-icons.js"
     ]
   }
 }
