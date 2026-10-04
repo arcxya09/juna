@@ -1,13 +1,20 @@
-import { rmSync, cpSync, existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
+import { rmSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 import { resolve, join } from "node:path";
+import { tmpdir } from "node:os";
 
 const site = "https://arcxya09.github.io/juna";
 const source = resolve("dist/client");
 if (!existsSync(`${source}/index.html`)) throw new Error("Static export did not produce index.html");
 const output = resolve("out");
+const assetCache = mkdtempSync(join(tmpdir(), "juna-pages-assets-"));
+if (existsSync(`${output}/_next/static`)) cpSync(`${output}/_next/static`, `${assetCache}/static`, { recursive: true });
 rmSync(output, { recursive: true, force: true });
 mkdirSync(output, { recursive: true });
+// Cached HTML must still be able to load scripts and styles from the previous
+// release. New files overwrite identical paths; older hashed paths are retained.
+if (existsSync(`${assetCache}/static`)) cpSync(`${assetCache}/static`, `${output}/_next/static`, { recursive: true });
 cpSync(source, output, { recursive: true });
+rmSync(assetCache, { recursive: true, force: true });
 writeFileSync(`${output}/.nojekyll`, "");
 
 // Vinext beta prerenders dynamic routes without a trailing slash. Export

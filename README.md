@@ -18,7 +18,7 @@ pnpm check
 pnpm build
 ```
 
-构建生成 `out/`，验证首页、四个研究页面、五篇论文详情以及内部链接和资源。将 `out/` 的全部内容（含 `.nojekyll`）提交到 `gh-pages` 根目录。GitHub Pages 使用 `Deploy from a branch` → `gh-pages` → `/ (root)`。
+构建生成 `out/`，验证首页、四个研究页面、五篇论文详情以及内部链接和资源。将 `out/` 的全部内容（含 `.nojekyll`）提交到 `gh-pages` 根目录。发布时保留至少前两次发布的 `_next/static/` 哈希资源，保证浏览器缓存旧 HTML 时仍可加载脚本与样式。GitHub Pages 使用 `Deploy from a branch` → `gh-pages` → `/ (root)`。
 
 项目部署路径 `/juna/` 由 `lib/asset-path.ts`、`vite.config.ts`、`next.config.ts` 配置。Vinext beta 的动态预渲染在 `trailingSlash: true` 时会收到 308，因此使用 `false` 构建，再由 `scripts/prepare-pages.mjs` 生成目录索引；线上地址始终为 `/research/<id>/` 和 `/publications/<slug>/`。
 
