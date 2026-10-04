@@ -44,8 +44,21 @@ export function ResearchDetail({ reaction }: { reaction: Reaction }) {
       try { const savedMotion = localStorage.getItem("juna-motion"); preferred = savedMotion !== "off" && savedMotion !== "false"; } catch { /* Use the system preference. */ }
       setMotion(preferred && !reduced.matches);
     };
+    const restoreLanguage = () => {
+      const parameters = new URLSearchParams(window.location.search);
+      let selected: Language = parameters.get("lang") === "en" ? "en" : "zh";
+      if (!parameters.has("lang")) {
+        try { selected = localStorage.getItem("juna-language") === "en" ? "en" : "zh"; } catch { /* Fall back to Chinese. */ }
+      }
+      setLang(selected);
+      document.documentElement.lang = selected === "zh" ? "zh-CN" : "en";
+    };
+    window.addEventListener("juna:history", restoreLanguage);
     reduced.addEventListener("change", preferenceChange);
-    return () => reduced.removeEventListener("change", preferenceChange);
+    return () => {
+      window.removeEventListener("juna:history", restoreLanguage);
+      reduced.removeEventListener("change", preferenceChange);
+    };
   }, []);
 
   function changeLanguage(selected: Language) {

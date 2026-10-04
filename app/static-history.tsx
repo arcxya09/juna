@@ -1,19 +1,7 @@
-"use client";
-
-import { useEffect } from "react";
-
 // GitHub Pages serves each exported document directly. Same-document history
 // must remain local: an RSC request to the /juna/ deployment prefix has no server.
+// Install during HTML parsing, before the framework and hydration start, so the
+// first anchor navigation is protected as well as later back/forward actions.
 export function StaticHistory() {
-  useEffect(() => {
-    const pathname = location.pathname;
-    const restore = (event: PopStateEvent) => {
-      if (location.pathname !== pathname) return;
-      event.stopImmediatePropagation();
-      window.dispatchEvent(new Event("juna:history"));
-    };
-    window.addEventListener("popstate", restore, true);
-    return () => window.removeEventListener("popstate", restore, true);
-  }, []);
-  return null;
+  return <script dangerouslySetInnerHTML={{ __html: `(function(){var pathname=location.pathname;window.addEventListener("popstate",function(event){if(location.pathname!==pathname)return;event.stopImmediatePropagation();window.dispatchEvent(new Event("juna:history"));},true);})();` }} />;
 }

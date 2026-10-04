@@ -37,6 +37,17 @@ export function PublicationDetail({ paper }: { paper: Paper }) {
     } catch { /* Persistence is optional when browser storage is unavailable. */ }
     setLang(selected);
     document.documentElement.lang = selected === "zh" ? "zh-CN" : "en";
+    const restoreLanguage = () => {
+      const parameters = new URLSearchParams(window.location.search);
+      let selected: Language = parameters.get("lang") === "en" ? "en" : "zh";
+      if (!parameters.has("lang")) {
+        try { selected = localStorage.getItem("juna-language") === "en" ? "en" : "zh"; } catch { /* Fall back to Chinese. */ }
+      }
+      setLang(selected);
+      document.documentElement.lang = selected === "zh" ? "zh-CN" : "en";
+    };
+    window.addEventListener("juna:history", restoreLanguage);
+    return () => window.removeEventListener("juna:history", restoreLanguage);
   }, []);
 
   useEffect(() => {
