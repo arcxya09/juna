@@ -49,11 +49,11 @@ export default function Home() {
       const p = new URLSearchParams(location.search); let saved = "zh"; try { saved = localStorage.getItem("juna-language") || "zh"; } catch {}
       const lang = p.get("lang") || saved, r = p.get("r");
       setView({ lang: lang === "en" ? "en" : "zh", reaction: reactions.some(x => x.id === r) ? r as ReactionId : "carbon", query: p.get("q") || "", year: ["all", ...papers.map(x => x.year)].includes(p.get("year") || "all") ? p.get("year") || "all" : "all", filter: ["all", "review", ...reactions.map(x => x.id)].includes(p.get("filter") || "all") ? p.get("filter") || "all" : "all" });
-    }; read(); window.addEventListener("popstate", read);
+    }; read(); window.addEventListener("juna:history", read);
     const preference = matchMedia("(prefers-reduced-motion: reduce)");
     const updateMotion = () => { setReduceMotion(preference.matches); let saved: string | null = null; try { saved = localStorage.getItem("juna-motion"); } catch {} setMotion(!preference.matches && saved !== "off"); };
     updateMotion(); preference.addEventListener("change", updateMotion);
-    return () => { window.removeEventListener("popstate", read); preference.removeEventListener("change", updateMotion); };
+    return () => { window.removeEventListener("juna:history", read); preference.removeEventListener("change", updateMotion); };
   }, []);
   useEffect(() => { document.documentElement.lang = l === 0 ? "zh-CN" : "en"; }, [l]);
   useEffect(() => {

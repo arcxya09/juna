@@ -35,6 +35,6 @@ pnpm build
 | `scripts/prepare-pages.mjs` | 输出验证、站点地图、错误页 |
 | `docs/maintenance.md` | 内容核验、视觉规范与发布流程 |
 
-首页查询参数保存语言、反应、搜索、方向与年份。详情返回时恢复主页状态。搜索支持普通数字与上标核素匹配。所有实验示意均标注概念属性；无真实计数、伪实验数据或虚构运行状态。
+`app/static-history.tsx` 保持同一静态页面内的历史导航在浏览器本地完成，避免把 `/juna/` 的锚点或筛选变化作为服务端 RSC 路由请求。首页查询参数保存语言、反应、搜索、方向与年份。详情返回时恢复主页状态。搜索支持普通数字与上标核素匹配。所有实验示意均标注概念属性；无真实计数、伪实验数据或虚构运行状态。
 
 影像：面纱星云为 ESA/Hubble & NASA, Z. Levay，CC BY 4.0（https://esahubble.org/images/potw2113a/）；JUNA 实景为 INRIO / 中国原子能科学研究院（https://inrio.net/facilities），原权利人保留版权。图像仅压缩为 WebP。

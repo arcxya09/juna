@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { assetPath } from "@/lib/asset-path";
+import { StaticHistory } from "./static-history";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arcxya09.github.io/juna/"),
@@ -31,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased"><StaticHistory />{children}</body>
     </html>
   );
 }
